@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CashMemo</string>
+    <string name="p_name" translatable="false">P_Name</string>
+    <string name="name">Name</string>
+    <string name="p_qty">P_Qty</string>
+    <string name="p_rate">P_Rate</string>
+    <string name="rate">Rate</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+</resources>

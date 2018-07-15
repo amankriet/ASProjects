@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirstProject</string>
+    <string name="fnumber">First No.</string>
+    <string name="snumber">Second No.</string>
+    <string name="add">Add</string>
+    <string name="clear">Clear</string>
+    <string name="efnum">Enter First Number</string>
+    <string name="esnum">Enter Second Number</string>
+    <string name="first_num">Enter First Number</string>
+    <string name="second_num">Enter Second Number</string>
+    <string name="result">Result</string>
+</resources>

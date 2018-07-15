@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SecondProject</string>
+    <string name="email">E-mail</string>
+    <string name="pwd">Password</string>
+    <string name="enter_pwd">Enter password</string>
+    <string name="secondproject">SecondProject</string>
+</resources>
