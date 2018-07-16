@@ -1,0 +1,4 @@
+#Sat Jul 07 13:59:26 IST 2018
+base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\CashMemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

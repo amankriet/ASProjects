@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImageButton</string>
+    <string name="clickhere">Click Here</string>
+    <string name="toggleoff">ToggleOff</string>
+    <string name="toggleon">ToggleOn</string>
+    <string name="hello_project">Hello Project</string>
+    <string name="start_typing_here">Start Typing Here</string>
+    <string name="enter_any_language">Enter Any Language</string>
+</resources>

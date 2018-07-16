@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="bclear">Clear</string>
+    <string name="b0">0</string>
+    <string name="bx2">x^2</string>
+    <string name="bx3">x^3</string>
+    <string name="bfact">fact</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b3">3</string>
+    <string name="bequalsto">=</string>
+    <string name="bmod">%</string>
+    <string name="b4">4</string>
+    <string name="b5">5</string>
+    <string name="b6">6</string>
+    <string name="bminus">-</string>
+    <string name="bdiv">/</string>
+    <string name="b7">7</string>
+    <string name="b8">8</string>
+    <string name="b9">9</string>
+    <string name="bplus">+</string>
+    <string name="bmul">*</string>
+    <string name="del" translatable="false">Del</string>
+    <string name="dec">.</string>
+</resources>

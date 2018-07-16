@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FourthProject</string>
+    <string name="veg">Veg</string>
+    <string name="non_veg">Non-Veg</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="click">Click</string>
+</resources>
