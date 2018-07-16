@@ -7,19 +7,20 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/input"
-        android:layout_width="246dp"
-        android:layout_height="97dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:text="Hello World!"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/input"
+            android:layout_width="246dp"
+            android:layout_height="97dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="Hello World!"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/button2"
