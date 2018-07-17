@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DViews</string>
+    <string name="textview">Text View</string>
+    <string name="edittext">Edit Text</string>
+    <string name="radiobutton">Radio Button</string>
+    <string name="checkboxview">Check Box View</string>
+    <string name="imagebuttonview">Image Button View</string>
+    <string name="togglebuttonview">Toggle Button View</string>
+    <string name="ratingbarview">Rating Bar View</string>
+    <string name="button_view">Button View</string>
+    <string name="hello_button_view">Hello Button View</string>
+    <string name="hello_check_box_view">Hello Check Box View</string>
+    <string name="hello_edit_text_view">Hello Edit text View</string>
+    <string name="hello_image_button_view">Hello Image Button View</string>
+    <string name="hello_radio_button_view">Hello Radio Button View</string>
+    <string name="hello_rating_bar_view">Hello Rating Bar View</string>
+    <string name="hello_text_view">Hello Text View</string>
+    <string name="hello_toggle_button_view">Hello Toggle Button View</string>
+</resources>
