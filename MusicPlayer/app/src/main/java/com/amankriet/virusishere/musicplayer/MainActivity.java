@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onMusicPlay(View view) {
-        if (mp1 == null)
+        if (mp1 == null) {
             mp1 = MediaPlayer.create(this, R.raw.dil_dooba);
-        mp1.start();
+            mp1.start();
+        }
     }
 
     public void onMusicStop(View view) {
