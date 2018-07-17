@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/dodger_blue"
+        android:text="@string/system_resource" />
+
+    <Button
+        android:id="@+id/bdial"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/dial" />
+
+    <Button
+        android:id="@+id/bshowbrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="138dp"
+        android:text="@string/show_browser" />
+
+    <ImageButton
+        android:id="@+id/bimg"
+        android:layout_width="141dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="177dp"
+        android:layout_marginStart="11dp"
+        android:src="@drawable/camera_logo" />
+
+    <ImageButton
+        android:id="@+id/bvid"
+        android:layout_width="206dp"
+        android:layout_height="157dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="162dp"
+        android:src="@drawable/video_recording" />
+
+</RelativeLayout>
