@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="own">#427df4</color>
+    <color name="west_side">#822ae0</color>
+    <color name="own1">#88e02a</color>
 </resources>

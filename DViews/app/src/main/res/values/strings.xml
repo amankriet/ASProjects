@@ -16,4 +16,9 @@
     <string name="hello_rating_bar_view">Hello Rating Bar View</string>
     <string name="hello_text_view">Hello Text View</string>
     <string name="hello_toggle_button_view">Hello Toggle Button View</string>
+    <string name="click_here_to_change_image">Click Here to Change Image</string>
+    <string name="aman">Aman</string>
+    <string name="abhishek">Abhishek</string>
+    <string name="raj_sir">Raj Sir</string>
+    <string name="check">Check</string>
 </resources>
