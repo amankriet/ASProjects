@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Text Size</string>
+    <string name="aplus">A+</string>
+    <string name="aminus">A-</string>
 </resources>
