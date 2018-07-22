@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             smsIntent.putExtra("sms_body", msg);
             if (smsIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(smsIntent);
+                message.setText("");
             } else {
                 Log.d(TAG, "Can't resolve app for ACTION_SENDTO Intent");
             }
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             smsManager.sendTextMessage(dest_addr, null, smsMessage, null, null);
             Toast.makeText(getApplicationContext(), getString(R.string.sms_sent), Toast.LENGTH_SHORT).show();
             recieved_sms.append("\nTo " + dest_addr + ": " + smsMessage);
+            message.setText("");
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), getString(R.string.sms_not_sent), Toast.LENGTH_SHORT).show();
         }
@@ -146,19 +148,23 @@ public class MainActivity extends AppCompatActivity {
     private void disableSmsButton() {
         Toast.makeText(this, "SMS usage disabled", Toast.LENGTH_SHORT).show();
         ImageButton smsButton = findViewById(R.id.ibsend_sms);
-        smsButton.setVisibility(View.INVISIBLE);
+        smsButton.setVisibility(View.GONE);
         Button retryButton = findViewById(R.id.bretry);
         retryButton.setVisibility(View.VISIBLE);
+        Button sb = findViewById(R.id.bsend);
+        sb.setVisibility(View.GONE);
     }
 
     private void enableSmsButton() {
         ImageButton smsButton = findViewById(R.id.ibsend_sms);
         smsButton.setVisibility(View.VISIBLE);
+        Button sb = findViewById(R.id.bsend);
+        sb.setVisibility(View.VISIBLE);
     }
 
     public void retryApp(View view) {
-        Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
-        startActivity(intent);
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.SEND_SMS}, MY_PERMISSIONS_REQUEST_SEND_SMS);
     }
 
 }

@@ -37,7 +37,6 @@ public class MySmsReceiver extends BroadcastReceiver {
                 strMessage += "From " + msgs[i].getOriginatingAddress();
                 strMessage += ": " + msgs[i].getMessageBody();
                 Log.d(TAG, "onReceive: " + strMessage);
-                Toast.makeText(context, strMessage, Toast.LENGTH_LONG).show();
                 try {
                     MainActivity.getInstace().updateTheTextView(strMessage);
                 } catch (Exception e) {
