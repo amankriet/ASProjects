@@ -10,4 +10,6 @@
     <string name="failure_permission">Failure Permission</string>
     <string name="sms_not_sent">SMS Not Sent</string>
     <string name="sms_sent">SMS Sent</string>
+    <string name="recieved_sms">Recieved SMS</string>
+    <string name="mobile_number">Mobile Number</string>
 </resources>

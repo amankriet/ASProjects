@@ -9,31 +9,43 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static MainActivity ins;
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
     Button sendb;
     ImageButton send_smsib;
     EditText mob_num, message;
+    public TextView recieved_sms;
+
+    public static MainActivity getInstace() {
+        return ins;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkForSmsPermission();
+        ins = this;
 
         sendb = findViewById(R.id.bsend);
         send_smsib = findViewById(R.id.ibsend_sms);
         mob_num = findViewById(R.id.etmob_num);
         message = findViewById(R.id.etmessage);
+        recieved_sms = findViewById(R.id.tv_recieve_sms);
+
+        recieved_sms.setMovementMethod(new ScrollingMovementMethod());
 
         sendb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void updateTheTextView(final String t) {
+
+        MainActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                recieved_sms.append("\n" + t);
+            }
+        });
     }
 
     protected void sendMessage() {
@@ -83,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(dest_addr, null, smsMessage, null, null);
             Toast.makeText(getApplicationContext(), getString(R.string.sms_sent), Toast.LENGTH_SHORT).show();
+            recieved_sms.append("\nTo " + dest_addr + ": " + smsMessage);
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), getString(R.string.sms_not_sent), Toast.LENGTH_SHORT).show();
         }
