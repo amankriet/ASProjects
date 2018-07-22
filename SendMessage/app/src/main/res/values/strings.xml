@@ -4,4 +4,10 @@
     <string name="enter_message">Enter Message</string>
     <string name="send">Send</string>
     <string name="your_message">Your Message</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="retry">Retry</string>
+    <string name="permission_not_granted">Permission not granted!</string>
+    <string name="failure_permission">Failure Permission</string>
+    <string name="sms_not_sent">SMS Not Sent</string>
+    <string name="sms_sent">SMS Sent</string>
 </resources>
