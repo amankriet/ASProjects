@@ -1,102 +1,79 @@
 package com.amankriet.virusishere.progressbar;
 
-import android.app.ProgressDialog;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
+    int progress=0;
     Button btn;
-    ProgressDialog progressbar;
-    private int progressbarstatus=0;
-    private Handler progressbarHandler=new Handler();
-    private long filesize=0;
+    ProgressBar pbar, hpbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        addListenerOnButtonClick();
-    }
-    public void addListenerOnButtonClick()
-    {
         btn=findViewById(R.id.btn);
+        pbar=findViewById(R.id.progressBar);
+        hpbar=findViewById(R.id.progressBar2);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressbar=new ProgressDialog(view.getContext());
-                progressbar.setCancelable(true);
-                progressbar.setMessage("File Download");
-                progressbar.setProgress(ProgressDialog.STYLE_SPINNER);
-                progressbar.setProgress(0);
-                progressbar.setMax(100);
-                progressbar.show();
-                progressbarstatus=0;
-                filesize=0;
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        while (progressbarstatus<100)
-                        {
-                            progressbarstatus=doOperation();
-                            try
-                            {
-                                Thread.sleep(2000);
-                            }
-                            catch (InterruptedException ie)
-                            {}
 
-                            progressbarHandler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    progressbar.setProgress(progressbarstatus);
-                                }
-                            });
-                        }
-                        if(progressbarstatus>=100)
-                        {
-                            try
-                            {
-                                Thread.sleep(100);
-                            }
-                            catch (Exception ie)
-                            {}
-                            progressbar.dismiss();
-                        }
-                    }
-                }).start();
+                pbar.setVisibility(View.VISIBLE);
+                setProgressValue(progress);
+
             }
         });
     }
-    public int doOperation()
-    {
-        int temp=0;
-        while (filesize <= 1000) {
 
-            filesize++;
-            if(filesize==1000)
-            {
-                temp=10;
+    private void setProgressValue(final int progress)
+    {
+        hpbar.setProgress(progress);
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                try
+                {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+
+                setProgressValue(progress + 10);
+
             }
-            if(filesize==2000)
-            {
-                temp=20;
-            }
-    /*        if(filesize==3000)
-            {
-                temp=30;
-            }
-            if(filesize==4000)
-            {
-                temp=40;
-            }*/
+        });
+
+        thread.start();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings)
+        {
+            return true;
         }
-        return temp;
+
+        return super.onOptionsItemSelected(item);
+
     }
 }

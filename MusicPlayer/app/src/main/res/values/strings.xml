@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Music Player</string>
+    <string name="status">Audio Status</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="ring">Ring</string>
+    <string name="silent">Silent</string>
+    <string name="mode">Mode</string>
 </resources>

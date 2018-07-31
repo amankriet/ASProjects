@@ -23,14 +23,25 @@
             android:textAlignment="center"
             android:textSize="25sp" />
 
-        <EditText
-            android:id="@+id/etmob_num"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/bone"
-            android:hint="@string/mobile_number"
-            android:inputType="number"
-            android:textSize="20sp" />
+        <TableRow>
+
+            <EditText
+                android:id="@+id/etmob_num"
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:background="@color/bone"
+                android:hint="@string/mobile_number"
+                android:inputType="number"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/bcall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/calling"
+                android:onClick="calling"/>
+
+        </TableRow>
 
         <TextView
             android:id="@+id/textView2"
@@ -44,7 +55,7 @@
         <TextView
             android:id="@+id/tv_recieve_sms"
             android:layout_width="match_parent"
-            android:layout_height="331dp"
+            android:layout_height="291dp"
             android:background="@color/brown_nose"
             android:gravity="bottom"
             android:hint="@string/recieved_sms"
