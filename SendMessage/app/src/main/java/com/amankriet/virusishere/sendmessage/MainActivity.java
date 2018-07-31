@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.PhoneStateListener;
 import android.telephony.SmsManager;
+import android.telephony.TelephonyManager;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
@@ -21,11 +23,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static MainActivity ins;
+    private MyPhoneCallListener mListener;
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
+    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1;
+    int phone_permission=10;
     Button sendb;
     ImageButton send_smsib;
     EditText mob_num, message;
+    TelephonyManager mTelephonyManager;
     public TextView recieved_sms;
 
     public static MainActivity getInstace() {
@@ -44,6 +50,23 @@ public class MainActivity extends AppCompatActivity {
         mob_num = findViewById(R.id.etmob_num);
         message = findViewById(R.id.etmessage);
         recieved_sms = findViewById(R.id.tv_recieve_sms);
+
+        mTelephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+
+        if (isTelephonyEnabled()) {
+            Log.d(TAG, "Telephony enabled");
+            mListener = new MyPhoneCallListener();
+            mTelephonyManager.listen(mListener,
+                    PhoneStateListener.LISTEN_CALL_STATE);
+            checkForPhonePermission();
+        } else {
+            Toast.makeText(this,
+                    "Telephony not enabled",
+                    Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "Telephony not enabled");
+            // Disable the call button.
+            disableCallButton();
+        }
 
         recieved_sms.setMovementMethod(new ScrollingMovementMethod());
 
@@ -142,6 +165,26 @@ public class MainActivity extends AppCompatActivity {
                     disableSmsButton();
                 }
             }
+            case 10: {
+                if (permissions[0].equalsIgnoreCase
+                        (Manifest.permission.CALL_PHONE)
+                        && grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED) {
+                    // Permission was granted.
+                    Log.d(TAG, "Permission Granted");
+                    Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                    phone_permission=1;
+
+                } else {
+                    // Permission denied. Stop the app.
+                    Log.d(TAG, getString(R.string.failure_permission));
+                    Toast.makeText(this, getString(R.string.failure_permission),
+                            Toast.LENGTH_SHORT).show();
+                    phone_permission=10;
+                    // Disable the call button
+                    disableCallButton();
+                }
+            }
         }
     }
 
@@ -165,6 +208,65 @@ public class MainActivity extends AppCompatActivity {
     public void retryApp(View view) {
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.SEND_SMS}, MY_PERMISSIONS_REQUEST_SEND_SMS);
+    }
+
+    private boolean isTelephonyEnabled() {
+        if (mTelephonyManager != null) {
+            if (mTelephonyManager.getSimState() ==
+                    TelephonyManager.SIM_STATE_READY) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void checkForPhonePermission() {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.CALL_PHONE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, getString(R.string.permission_not_granted));
+            phone_permission=10;
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    MY_PERMISSIONS_REQUEST_CALL_PHONE);
+        } else {
+            // Permission already granted.
+            //enableCallButton();
+            phone_permission=1;
+        }
+    }
+
+        public void calling (View view){
+            Intent call = new Intent(Intent.ACTION_CALL);
+            String phoneNumber = String.format("tel: %s",
+                    mob_num.getText().toString());
+            call.setData(Uri.parse(phoneNumber));
+            if (call.resolveActivity(getPackageManager()) != null) {
+                checkForPhonePermission();
+                startActivity(call);
+            } else {
+                Log.e(TAG, "Can't resolve app for ACTION_CALL Intent.");
+            }
+        }
+
+    private void disableCallButton() {
+        Toast.makeText(this, "Call usage disabled", Toast.LENGTH_SHORT).show();
+        ImageButton ibcall = findViewById(R.id.bcall);
+        ibcall.setVisibility(View.GONE);
+        Button retryButton = findViewById(R.id.bretry);
+        retryButton.setVisibility(View.VISIBLE);
+        Button sb = findViewById(R.id.bsend);
+        sb.setVisibility(View.GONE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (isTelephonyEnabled()) {
+
+            mTelephonyManager.listen(mListener,
+                    PhoneStateListener.LISTEN_NONE);
+        }
     }
 
 }

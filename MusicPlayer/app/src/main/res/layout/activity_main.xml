@@ -34,4 +34,46 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/vibrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="vibrate"
+            android:text="@string/vibrate" />
+
+        <Button
+            android:id="@+id/ring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ring"
+            android:text="@string/ring" />
+
+        <Button
+            android:id="@+id/silent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="silent"
+            android:text="@string/silent" />
+
+        <Button
+            android:id="@+id/mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="mode"
+            android:text="@string/mode" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:hint="@string/status" />
+
 </LinearLayout>
