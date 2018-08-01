@@ -1,67 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DisplayDetail">
 
-    <EditText
-        android:id="@+id/textname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp">
 
-    <EditText
-        android:id="@+id/textemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
-        android:ems="10"
-        android:hint="Email-ID"
-        android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="158dp"
-        android:text="Save Detail" />
+        <EditText
+            android:id="@+id/textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/edittextcountry"
+            android:layout_below="@+id/edittextcountry"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:hint="@string/email_id"
+            android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/phonenum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:hint="Phone-No."
-        android:inputType="phone" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textname"
+            android:layout_alignParentStart="true"
+            android:text="@string/name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <EditText
-        android:id="@+id/edittextcity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="179dp"
-        android:ems="10"
-        android:hint="City"
-        android:inputType="textCapWords|textPersonName" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/edittextcity"
+            android:layout_marginBottom="28dp"
+            android:onClick="run"
+            android:text="@string/save_detail" />
 
-    <EditText
-        android:id="@+id/edittextcountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:ems="10"
-        android:hint="Country"
-        android:inputType="textCapWords|textPersonName" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textemail"
+            android:layout_alignStart="@+id/textView1"
+            android:text="@string/email_id"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/phonenum"
+            android:layout_alignStart="@+id/textView1"
+            android:text="@string/phone_no"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textemail"
+            android:layout_alignStart="@+id/textView5"
+            android:text="@string/country"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edittextcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textname"
+            android:layout_below="@+id/textemail"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/city"
+            android:inputType="textCapWords|textPersonName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edittextcity"
+            android:layout_alignBottom="@+id/edittextcity"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textemail"
+            android:text="@string/city"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edittextcountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textname"
+            android:layout_below="@+id/phonenum"
+            android:ems="10"
+            android:hint="@string/country"
+            android:inputType="textCapWords|textPersonName" />
+
+        <requestFocus />
+
+        <EditText
+            android:id="@+id/phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/edittextcountry"
+            android:layout_below="@+id/textname"
+            android:ems="10"
+            android:hint="@string/phone_no"
+            android:inputType="phone|text" />
+
+    </RelativeLayout>
+
+</ScrollView>

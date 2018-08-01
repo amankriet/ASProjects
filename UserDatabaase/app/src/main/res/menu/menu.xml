@@ -4,7 +4,8 @@
 
 
     <item
-        android:title="Item"
-        android:id="@+id/item1"/>
+        android:id="@+id/item1"
+        android:title="@string/add_new"
+        app:showAsAction="ifRoom|withText"></item>
 
 </menu>
