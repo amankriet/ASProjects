@@ -7,11 +7,12 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "MyDBName";
+    public static final String DATABASE_NAME = "MyDBName.db";
     public static final String CONTACTS_TABLE_NAME = "Contacts";
     public static final String CONTACTS_COLUMN_ID = "id";
     public static final String CONTACTS_COLUMN_NAME = "Name";
@@ -30,7 +31,8 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table Contacts" + "(id integer primary KEY, Name text, Phone text, Email text, City text, Country text)");
+        db.execSQL("create table Contacts" + "(id integer primary key, Name text, Phone text, " +
+                "Email text, City text, Country text)");
 
     }
 
@@ -56,19 +58,47 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public Cursor getData()
+    public Cursor getData(int id)
     {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor res = db.rawQuery("select * from Contacts where id="+id+"", null);
+        Cursor res = db.rawQuery("select * from Contacts where id=" + id + "", null);
         return res;
     }
 
     public int numberOfRows()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        int numRows = (int) DatabaseUtils.queryNumEntries(db, CONTACTS_TABLE_NAME);
-        return numRows;
+        return (int) DatabaseUtils.queryNumEntries(db, CONTACTS_TABLE_NAME);
+    }
+
+    public boolean updateContact(Integer id, String name, String phone, String email, String city, String country) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Name", name);
+        contentValues.put("Phone", phone);
+        contentValues.put("Email", email);
+        contentValues.put("City", city);
+        contentValues.put("Country", country);
+        db.update("Contacts", contentValues, "id = ?", new String[]{Integer.toString(id)});
+        return true;
+    }
+
+    public Integer deleteContact(Integer id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete("Contacts", "id = ?", new String[]{Integer.toString(id)});
+    }
+
+    public ArrayList getAllContacts() {
+        ArrayList array_list = new ArrayList();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from Contacts", null);
+        res.moveToFirst();
+        while (!res.isAfterLast()) {
+            array_list.add(res.getString(res.getColumnIndex(CONTACTS_COLUMN_NAME)));
+            res.moveToNext();
+        }
+        return array_list;
     }
 
 }
