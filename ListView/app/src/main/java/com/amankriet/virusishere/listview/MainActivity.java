@@ -2,6 +2,8 @@ package com.amankriet.virusishere.listview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -31,5 +33,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id)
+        {
+            case R.id.action_settings:
+                Toast.makeText(MainActivity.this, "You clicked Settings", Toast.LENGTH_SHORT).show();
+                MyDialogFragment settingsdialog = new MyDialogFragment();
+                settingsdialog.setNames("Settings", "Are you done?", "settingsCancelMethod", "settingsYesMethod");
+                settingsdialog.show(getFragmentManager(), "ddialog");
+                return true;
+            case R.id.action_exit:
+                Toast.makeText(MainActivity.this, "You choosed Exit", Toast.LENGTH_SHORT).show();
+                MyDialogFragment exitdialog =new MyDialogFragment();
+                exitdialog.setNames("Exit", "Are You Sure?", "exitCancelMethod", "exitYesMethod");
+                exitdialog.show(getFragmentManager(), "ddialog");
+                return true;
+                default:
+                    Toast.makeText(MainActivity.this, "You choosed none", Toast.LENGTH_SHORT).show();
+                    return true;
+        }
     }
 }

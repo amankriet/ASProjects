@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">User Database</string>
+    <string name="phone_no">Phone-No.</string>
+    <string name="name">Name</string>
+    <string name="email_id">Email-ID</string>
+    <string name="save_detail">Save Detail</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="edit">Edit</string>
+    <string name="add_new">Add New</string>
+    <string name="delete">Delete</string>
+    <string name="activity_display_contact">Display Contact Activity</string>
+</resources>

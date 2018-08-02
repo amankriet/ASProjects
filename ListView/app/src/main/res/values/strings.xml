@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">List View</string>
+    <string name="exit">Exit</string>
+    <string name="settings">Settings</string>
 </resources>
