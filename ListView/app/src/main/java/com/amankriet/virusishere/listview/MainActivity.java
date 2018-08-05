@@ -49,13 +49,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 Toast.makeText(MainActivity.this, "You clicked Settings", Toast.LENGTH_SHORT).show();
                 MyDialogFragment settingsdialog = new MyDialogFragment();
-                settingsdialog.setNames("Settings", "Are you done?", "settingsCancelMethod", "settingsYesMethod");
+                settingsdialog.setNames("Settings", "Are you done?", "settingsCancelMethod",
+                        "settingsYesMethod", "setings");
                 settingsdialog.show(getFragmentManager(), "ddialog");
                 return true;
             case R.id.action_exit:
                 Toast.makeText(MainActivity.this, "You choosed Exit", Toast.LENGTH_SHORT).show();
                 MyDialogFragment exitdialog =new MyDialogFragment();
-                exitdialog.setNames("Exit", "Are You Sure?", "exitCancelMethod", "exitYesMethod");
+                exitdialog.setNames("Exit", "Are You Sure?", "exitCancelMethod",
+                        "exitYesMethod", "exit_app");
                 exitdialog.show(getFragmentManager(), "ddialog");
                 return true;
                 default:

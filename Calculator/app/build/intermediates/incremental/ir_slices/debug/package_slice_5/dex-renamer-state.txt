@@ -1,4 +1,4 @@
-#Sun Jul 08 22:27:45 IST 2018
-base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+#Sun Aug 05 17:11:34 IST 2018
+base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

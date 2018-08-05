@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 Bundle databundle = new Bundle();
                 databundle.putInt("id",id_To_Search);
 
-                Intent intent = new Intent(getApplicationContext(),com.amankriet.virusishere.userdatabaase.DisplayDetail.class);
+                Intent intent = new Intent(getApplicationContext(),DisplayDetail.class);
                 intent.putExtras(databundle);
                 startActivity(intent);
 

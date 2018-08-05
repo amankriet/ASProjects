@@ -55,7 +55,7 @@ public class DisplayDetail extends AppCompatActivity {
                     rs.close();
                 }
                 Button b = findViewById(R.id.button1);
-                b.setVisibility(View.VISIBLE);
+                b.setVisibility(View.INVISIBLE);
 
                 name.setText(nam);
                 name.setFocusable(false);

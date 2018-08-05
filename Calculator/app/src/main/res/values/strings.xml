@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">My Calculator</string>
     <string name="bclear">Clear</string>
     <string name="b0">0</string>
-    <string name="bx2">x^2</string>
-    <string name="bx3">x^3</string>
     <string name="bfact">fact</string>
     <string name="b1">1</string>
     <string name="b2">2</string>
