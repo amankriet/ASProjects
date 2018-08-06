@@ -1,7 +1,7 @@
 package com.amankriet.virusishere.calculator;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     String msg="Android";
-    Button zero,one,two,three,four,five,six,seven,eight,nine,clear,xsquare,xcube,fact,equalsto,mod,minus,div,plus,mul,del,decimal;
-    TextView tv;
+    Button zero, one, two, three, four, five, six, seven, eight, nine, clear, fact, equalsto, mod, minus, div, plus, mul, del, decimal;
+    TextView tv, tv2;
     boolean add,sub,prod,divi,per;
     Double var1,var2;
 
@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         eight=findViewById(R.id.eightb);
         nine=findViewById(R.id.nineb);
         clear=findViewById(R.id.clearb);
-        xsquare=findViewById(R.id.xsquareb);
-        xcube=findViewById(R.id.xcubeb);
         fact=findViewById(R.id.factb);
         equalsto=findViewById(R.id.equalstob);
         mod=findViewById(R.id.modb);
@@ -40,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         plus=findViewById(R.id.plusb);
         mul=findViewById(R.id.mulb);
         tv=findViewById(R.id.tvc);
+        tv2 = findViewById(R.id.tvc2);
         del=findViewById(R.id.deli);
         decimal=findViewById(R.id.decimal);
 
@@ -233,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 tv.setText("0");
+                tv2.setText("");
                 add=false;
                 sub=false;
                 prod=false;
@@ -353,26 +353,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        xsquare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                var1=Double.parseDouble(tv.getText().toString());
-                tv.setText((var1*var1)+"");
-
-            }
-        });
-
-        xcube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                var1=Double.parseDouble(tv.getText().toString());
-                tv.setText((var1*var1*var1)+"");
-
-            }
-        });
-
         fact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -380,6 +360,7 @@ public class MainActivity extends AppCompatActivity {
                 Double i,n,ans;
                 ans=1.0;
                 n=Double.parseDouble(tv.getText().toString());
+                tv2.setText(n + "!");
                 if (n==0 || n==1)
                 {
                     tv.setText("1");
@@ -404,17 +385,19 @@ public class MainActivity extends AppCompatActivity {
                 var2=Double.parseDouble(tv.getText()+"");
                 if(add)
                 {
-
+                    tv2.setText(var1 + "+" + var2);
                     tv.setText((var1+var2)+"");
                     add=false;
                 }
                 else if(sub)
                 {
+                    tv2.setText(var1 + "-" + var2);
                     tv.setText((var1-var2)+"");
                     sub=false;
                 }
                 else if (prod)
                 {
+                    tv2.setText(var1 + "*" + var2);
                     if (var1*var2==0)
                     {
                         tv.setText("0");
@@ -427,6 +410,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (divi)
                 {
+                    tv2.setText(var1 + "/" + var2);
                     if (var2==0)
                     {
                         tv.setText("Not Defined!");
@@ -442,11 +426,13 @@ public class MainActivity extends AppCompatActivity {
                 {
                     if (var2==0)
                     {
+                        tv2.setText(var1 + "%");
                         tv.setText((var1/100)+"");
                         per=false;
                     }
                     else
                     {
+                        tv2.setText("(" + var1 + "/" + var2 + ")%");
                         tv.setText(((var1/var2)*100)+"");
                         per=false;
                     }

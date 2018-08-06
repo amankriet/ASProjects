@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class MyDialogFragment extends DialogFragment {
 
-    String dtitle, dmsg, dcancelmethod, dyesmethod;
+    String dtitle, dmsg, dcancelmethod, dyesmethod, icon_name;
 
     @NonNull
     @Override
@@ -20,6 +20,16 @@ public class MyDialogFragment extends DialogFragment {
         AlertDialog.Builder ddialog = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         ddialog.setTitle(dtitle);
         ddialog.setMessage(dmsg);
+
+        if (icon_name.equals("settings"))
+        {
+            ddialog.setIcon(R.mipmap.ic_settings_app);
+        }
+        else
+        {
+            ddialog.setIcon(R.mipmap.ic_exit_app);
+        }
+
         ddialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -52,12 +62,13 @@ public class MyDialogFragment extends DialogFragment {
         return ddialog.show();
     }
 
-    public void setNames(String dtitle, String dmsg, final String dcancelmethod, final String dyesmethod)
+    public void setNames(String dtitle, String dmsg, final String dcancelmethod, final String dyesmethod, String icon_name)
     {
         this.dtitle = dtitle;
         this.dmsg=dmsg;
         this.dcancelmethod=dcancelmethod;
         this.dyesmethod=dyesmethod;
+        this.icon_name=icon_name;
     }
 
     private void exitYesMethod()
