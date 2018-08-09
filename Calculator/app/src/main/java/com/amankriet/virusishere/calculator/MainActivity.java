@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
@@ -401,7 +400,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (n % 1 == 0) {
                     displayresult(txt, "Error: Non-Integer Input!");
                 }
-                /*else
+                else
                 {
                     for (i=n; i>=1; i--)
                     {
@@ -409,8 +408,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     result=final_decresult.stripTrailingZeros().toPlainString();
                     displayresult(txt, result);
-                }*/
-
+                }
             }
         });
 
