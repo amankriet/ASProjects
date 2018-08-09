@@ -7,19 +7,19 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.3"
-    timestamp="1533795181449"
+    timestamp="1533797199197"
     token="2935323819805281793"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1113" />
+        duration="906" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1248" />
+        duration="31" />
     <task
         name="verifier"
         duration="32" />
@@ -75,16 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1533794752890"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1533795181449"
+        timestamp="1533797199197"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\build\intermediates\split-apk\debug\slices\slice_4.apk"

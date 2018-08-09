@@ -400,13 +400,16 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (n % 1 == 0) {
                     displayresult(txt, "Error: Non-Integer Input!");
-                } else {
-                    for (i=n; i>=1; i--) {
+                }
+                /*else
+                {
+                    for (i=n; i>=1; i--)
+                    {
                         final_decresult = final_decresult.multiply(new BigDecimal(String.valueOf(i)));
                     }
-                    result = final_decresult.stripTrailingZeros().toPlainString();
+                    result=final_decresult.stripTrailingZeros().toPlainString();
                     displayresult(txt, result);
-                }
+                }*/
 
             }
         });
