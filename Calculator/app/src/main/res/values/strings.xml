@@ -20,4 +20,6 @@
     <string name="bmul">*</string>
     <string name="del" translatable="false">Del</string>
     <string name="dec">.</string>
+    <string name="exit">Exit</string>
+    <string name="about">About</string>
 </resources>

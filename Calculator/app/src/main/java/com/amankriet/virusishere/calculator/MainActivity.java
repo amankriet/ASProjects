@@ -1,19 +1,30 @@
 package com.amankriet.virusishere.calculator;
 
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
-    String msg="Android";
     Button zero, one, two, three, four, five, six, seven, eight, nine, clear, fact, equalsto, mod, minus, div, plus, mul, del, decimal;
     TextView tv, tv2;
+    String txt, result;
     boolean add,sub,prod,divi,per;
-    Double var1,var2;
+    BigDecimal var1, var2;
+    BigDecimal final_decresult = new BigDecimal("0");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 x=str.indexOf(".");
                 if (x<0)
                 {
-                    tv.setText(tv.getText().toString()+".");
+                    txt = tv.getText().toString() + ".";
+                    tv.setText(txt);
                 }
 
             }
@@ -69,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"0");
+                    txt = tv.getText() + "0";
+                    tv.setText(txt);
                 }
             }
         });
@@ -84,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"1");
+                    txt = tv.getText() + "1";
+                    tv.setText(txt);
                 }
             }
         });
@@ -99,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"2");
+                    txt = tv.getText() + "2";
+                    tv.setText(txt);
                 }
             }
         });
@@ -114,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"3");
+                    txt = tv.getText() + "3";
+                    tv.setText(txt);
                 }
             }
         });
@@ -129,7 +145,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"4");
+                    txt = tv.getText() + "4";
+                    tv.setText(txt);
                 }
             }
         });
@@ -144,7 +161,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"5");
+                    txt = tv.getText() + "5";
+                    tv.setText(txt);
                 }
             }
         });
@@ -160,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"6");
+                    txt = tv.getText() + "6";
+                    tv.setText(txt);
                 }
             }
         });
@@ -175,7 +194,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"7");
+                    txt = tv.getText() + "7";
+                    tv.setText(txt);
                 }
             }
         });
@@ -190,7 +210,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"8");
+                    txt = tv.getText() + "8";
+                    tv.setText(txt);
                 }
             }
         });
@@ -204,7 +225,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    tv.setText(tv.getText()+"9");
+                    txt = tv.getText() + "9";
+                    tv.setText(txt);
                 }
             }
         });
@@ -246,20 +268,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (sub || prod || divi || per)
+                if (sub || prod || divi || per || add)
                 {
                     sub=false;
                     per=false;
                     prod=false;
                     divi=false;
                     add=true;
+                    tv2.setText("+");
                 }
                 else
                 {
                     String str=tv.getText().toString();
-                    var1=Double.parseDouble(str);
+                    var1 = new BigDecimal(str);
                     add=true;
                     tv.setText("0");
+                    tv2.setText("+");
                 }
             }
         });
@@ -267,20 +291,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (add || prod || divi || per)
+                if (add || prod || divi || per || sub)
                 {
                     add=false;
                     per=false;
                     prod=false;
                     divi=false;
                     sub=true;
+                    tv2.setText("-");
                 }
                 else
                 {
                     String str=tv.getText().toString();
-                    var1=Double.parseDouble(str);
+                    var1 = new BigDecimal(str);
                     sub=true;
                     tv.setText("0");
+                    tv2.setText("-");
                 }
             }
         });
@@ -289,20 +315,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (add || sub || divi || per)
+                if (add || sub || divi || per || prod)
                 {
                     add=false;
                     per=false;
                     sub=false;
                     divi=false;
                     prod=true;
+                    tv2.setText("*");
                 }
                 else
                 {
                     String str=tv.getText().toString();
-                    var1=Double.parseDouble(str);
+                    var1 = new BigDecimal(str);
                     prod=true;
                     tv.setText("0");
+                    tv2.setText("*");
                 }
 
             }
@@ -312,20 +340,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (add || prod || sub || per)
+                if (add || prod || sub || per || divi)
                 {
                     add=false;
                     per=false;
                     prod=false;
                     sub=false;
                     divi=true;
+                    tv2.setText("/");
                 }
                 else
                 {
                     String str=tv.getText().toString();
-                    var1=Double.parseDouble(str);
+                    var1 = new BigDecimal(str);
                     divi=true;
                     tv.setText("0");
+                    tv2.setText("/");
                 }
 
             }
@@ -335,19 +365,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (add || prod || divi || sub)
+                if (add || prod || divi || sub || per)
                 {
                     add=false;
                     sub=false;
                     prod=false;
                     divi=false;
                     per=true;
+                    tv2.setText("%");
                 }
                 else
                 {
-                    var1=Double.parseDouble(tv.getText().toString());
+                    String str = tv.getText().toString();
+                    var1 = new BigDecimal(str);
                     per=true;
                     tv.setText("0");
+                    tv2.setText("%");
                 }
 
             }
@@ -357,22 +390,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Double i,n,ans;
-                ans=1.0;
+                Double i, n;
+                final_decresult = BigDecimal.valueOf(1);
                 n=Double.parseDouble(tv.getText().toString());
-                tv2.setText(n + "!");
+                txt = String.valueOf(n) + "!";
                 if (n==0 || n==1)
                 {
-                    tv.setText("1");
+                    displayresult(txt, "1");
 
-                }
-                else
-                {
-                    for (i=n; i>=1; i--)
-                    {
-                        ans*=i;
+                } else if (n % 1 == 0) {
+                    displayresult(txt, "Error: Non-Integer Input!");
+                } else {
+                    for (i=n; i>=1; i--) {
+                        final_decresult = final_decresult.multiply(new BigDecimal(String.valueOf(i)));
                     }
-                    tv.setText(ans+"");
+                    result = final_decresult.stripTrailingZeros().toPlainString();
+                    displayresult(txt, result);
                 }
 
             }
@@ -382,95 +415,126 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                var2=Double.parseDouble(tv.getText()+"");
+                String str = tv.getText().toString();
+                var2 = new BigDecimal(str);
                 if(add)
                 {
-                    tv2.setText(var1 + "+" + var2);
-                    tv.setText((var1+var2)+"");
+                    txt = var1.toString() + "+" + var2.toString();
+                    result = var1.add(var2).stripTrailingZeros().toPlainString();
+                    displayresult(txt, result);
                     add=false;
                 }
                 else if(sub)
                 {
-                    tv2.setText(var1 + "-" + var2);
-                    tv.setText((var1-var2)+"");
+                    txt = var1.toString() + "-" + var2.toString();
+                    result = var1.subtract(var2).stripTrailingZeros().toPlainString();
+                    displayresult(txt, result);
                     sub=false;
                 }
                 else if (prod)
                 {
-                    tv2.setText(var1 + "*" + var2);
-                    if (var1*var2==0)
+                    txt = var1.toString() + "*" + var2.toString();
+                    if (var1.multiply(var2).equals(BigDecimal.ZERO))
                     {
-                        tv.setText("0");
+                        displayresult(txt, "0");
                     }
                     else
                     {
-                        tv.setText((var1*var2)+"");
+                        result = var1.multiply(var2).stripTrailingZeros().toPlainString();
+                        displayresult(txt, result);
                     }
                     prod=false;
                 }
                 else if (divi)
                 {
-                    tv2.setText(var1 + "/" + var2);
-                    if (var2==0)
+                    txt = var1.toString() + "/" + var2.toString();
+                    if (var2.equals(BigDecimal.ZERO))
                     {
-                        tv.setText("Not Defined!");
+                        displayresult(txt, "Not Defined!");
                         divi=false;
                     }
                     else
                     {
-                        tv.setText((var1/var2)+"");
+                        try {
+                            result = var1.divide(var2, 10, RoundingMode.UNNECESSARY).stripTrailingZeros().toPlainString();
+                        } catch (ArithmeticException e) {
+                            result = var1.divide(var2, 10, RoundingMode.HALF_UP).stripTrailingZeros().toString();
+                        }
+                        displayresult(txt, result);
                         divi=false;
                     }
                 }
                 else if (per)
                 {
-                    if (var2==0)
+                    if (var2.equals(BigDecimal.ZERO))
                     {
-                        tv2.setText(var1 + "%");
-                        tv.setText((var1/100)+"");
+                        txt = var1.toString() + "%";
+                        result = var1.divide(new BigDecimal("100"), 10, BigDecimal.ROUND_UNNECESSARY).stripTrailingZeros().toPlainString();
+                        displayresult(txt, result);
                         per=false;
                     }
                     else
                     {
-                        tv2.setText("(" + var1 + "/" + var2 + ")%");
-                        tv.setText(((var1/var2)*100)+"");
+                        txt = "(" + var1.toString() + "/" + var2.toString() + ")%";
+                        try {
+                            result = (var1.divide(var2, 10, RoundingMode.UNNECESSARY).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
+                        } catch (ArithmeticException e) {
+                            result = (var1.divide(var2, 10, RoundingMode.HALF_UP).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
+                        }
+                        displayresult(txt, result);
                         per=false;
                     }
                 }
             }
         });
 
-        Log.d(msg, "onCreate: The onCreate event");
+    }
 
+    public void displayresult(String tv2cal, String tvresult) {
+        tv2.setText(tv2cal);
+        tv.setText(tvresult);
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(msg, "onStart: The onStart() event");
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(msg, "onResume: The onResume() event");
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.about_menu:
+                AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);
+                dialogbox.setTitle("About");
+                dialogbox.setIcon(R.mipmap.ic_info);
+                dialogbox.setMessage("This is a simple calculator app with simple UI and for large" +
+                        " calculations!\n\n Aman (amankriet@gmail.com)").setCancelable(true);
+                Objects.requireNonNull(dialogbox.show().getWindow()).setBackgroundDrawable(new ColorDrawable(Color.LTGRAY));
+                return true;
+            case R.id.exit_menu:
+                AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+                alertbox.setTitle("Exit");
+                alertbox.setIcon(R.mipmap.ic_exit);
+                alertbox.setMessage("Are you sure?").setCancelable(true).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Log.d("Exit", "Exit Cancelled");
+                    }
+                });
+                Objects.requireNonNull(alertbox.show().getWindow()).setBackgroundDrawable(new ColorDrawable(Color.LTGRAY));
+                return true;
+            default:
+                Log.d("None Selected", "Nothing selected");
+                return true;
+        }
+
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(msg, "onPause: The onPause event");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(msg, "onStop: The onStop event");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(msg, "onDestroy: See ya soon buddy!");
-    }
 }

@@ -7,4 +7,7 @@
     <color name="dark_grey">#333333</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="my_color">#a6a6d6</color>
+    <color name="sky_blue">#87CEEB</color>
+    <color name="butterscotch">#c98932</color>
 </resources>
