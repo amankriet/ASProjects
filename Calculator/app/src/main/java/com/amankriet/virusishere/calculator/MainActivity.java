@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         decimal=findViewById(R.id.decimal);
 
         tv.setText("0");
+        tv.setMovementMethod(new ScrollingMovementMethod());
 
         decimal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -279,11 +281,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    String str=tv.getText().toString();
-                    var1 = new BigDecimal(str);
-                    add=true;
-                    tv.setText("0");
-                    tv2.setText("+");
+                    try {
+                        String str = tv.getText().toString();
+                        var1 = new BigDecimal(str);
+                        add = true;
+                        tv.setText("0");
+                        tv2.setText("+");
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
             }
         });
@@ -302,11 +308,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    String str=tv.getText().toString();
-                    var1 = new BigDecimal(str);
-                    sub=true;
-                    tv.setText("0");
-                    tv2.setText("-");
+                    try {
+                        String str = tv.getText().toString();
+                        var1 = new BigDecimal(str);
+                        sub = true;
+                        tv.setText("0");
+                        tv2.setText("-");
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
             }
         });
@@ -326,11 +336,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    String str=tv.getText().toString();
-                    var1 = new BigDecimal(str);
-                    prod=true;
-                    tv.setText("0");
-                    tv2.setText("*");
+                    try {
+                        String str = tv.getText().toString();
+                        var1 = new BigDecimal(str);
+                        prod = true;
+                        tv.setText("0");
+                        tv2.setText("*");
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
 
             }
@@ -351,11 +365,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    String str=tv.getText().toString();
-                    var1 = new BigDecimal(str);
-                    divi=true;
-                    tv.setText("0");
-                    tv2.setText("/");
+                    try {
+                        String str = tv.getText().toString();
+                        var1 = new BigDecimal(str);
+                        divi = true;
+                        tv.setText("0");
+                        tv2.setText("/");
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
 
             }
@@ -376,11 +394,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    String str = tv.getText().toString();
-                    var1 = new BigDecimal(str);
-                    per=true;
-                    tv.setText("0");
-                    tv2.setText("%");
+                    try {
+                        String str = tv.getText().toString();
+                        var1 = new BigDecimal(str);
+                        per = true;
+                        tv.setText("0");
+                        tv2.setText("%");
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
 
             }
@@ -390,27 +412,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Double i, n;
-                final_decresult = BigDecimal.valueOf(1);
-                n=Double.parseDouble(tv.getText().toString());
-                txt = String.valueOf(n) + "!";
-                if (n==0 || n==1)
-                {
-                    displayresult(txt, "1");
+                try {
+                    try {
+                        Double i, n;
+                        final_decresult = BigDecimal.valueOf(1);
+                        n = Double.parseDouble(tv.getText().toString());
+                        txt = String.valueOf(n) + "!";
+                        if (n == 0 || n == 1) {
+                            displayresult(txt, "1");
 
-                } else if (n % 1 == 0) {
-                    displayresult(txt, "Error: Non-Integer Input!");
-                }
-                /*else
-                {
-                    for (i=n; i>=1; i--)
-                    {
-                        final_decresult = final_decresult.multiply(new BigDecimal(String.valueOf(i)));
+                        } else if (n > 2000) {
+                            throw new OutOfMemoryError("Out of Memory!");
+                        } else if (n % 1 != 0) {
+                            displayresult(txt, "Error: Non-Integer Input!");
+                        } else {
+                            for (i = n; i >= 1; i--) {
+                                final_decresult = final_decresult.multiply(new BigDecimal(String.valueOf(i)));
+                            }
+                            result = final_decresult.stripTrailingZeros().toPlainString();
+                            displayresult(txt, result);
+                        }
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
                     }
-                    result=final_decresult.stripTrailingZeros().toPlainString();
-                    displayresult(txt, result);
-                }*/
-
+                } catch (Error e) {
+                    displayresult("", "Out of Memory!");
+                }
             }
         });
 
@@ -422,70 +449,81 @@ public class MainActivity extends AppCompatActivity {
                 var2 = new BigDecimal(str);
                 if(add)
                 {
-                    txt = var1.toString() + "+" + var2.toString();
-                    result = var1.add(var2).stripTrailingZeros().toPlainString();
-                    displayresult(txt, result);
-                    add=false;
+                    try {
+                        txt = var1.toString() + "+" + var2.toString();
+                        result = var1.add(var2).stripTrailingZeros().toPlainString();
+                        displayresult(txt, result);
+                        add = false;
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
                 else if(sub)
                 {
-                    txt = var1.toString() + "-" + var2.toString();
-                    result = var1.subtract(var2).stripTrailingZeros().toPlainString();
-                    displayresult(txt, result);
-                    sub=false;
+                    try {
+                        txt = var1.toString() + "-" + var2.toString();
+                        result = var1.subtract(var2).stripTrailingZeros().toPlainString();
+                        displayresult(txt, result);
+                        sub = false;
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
+                    }
                 }
                 else if (prod)
                 {
-                    txt = var1.toString() + "*" + var2.toString();
-                    if (var1.multiply(var2).equals(BigDecimal.ZERO))
-                    {
-                        displayresult(txt, "0");
+                    try {
+                        txt = var1.toString() + "*" + var2.toString();
+                        if (var1.multiply(var2).equals(BigDecimal.ZERO)) {
+                            displayresult(txt, "0");
+                        } else {
+                            result = var1.multiply(var2).stripTrailingZeros().toPlainString();
+                            displayresult(txt, result);
+                        }
+                        prod = false;
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
                     }
-                    else
-                    {
-                        result = var1.multiply(var2).stripTrailingZeros().toPlainString();
-                        displayresult(txt, result);
-                    }
-                    prod=false;
                 }
                 else if (divi)
                 {
-                    txt = var1.toString() + "/" + var2.toString();
-                    if (var2.equals(BigDecimal.ZERO))
-                    {
-                        displayresult(txt, "Not Defined!");
-                        divi=false;
-                    }
-                    else
-                    {
-                        try {
-                            result = var1.divide(var2, 10, RoundingMode.UNNECESSARY).stripTrailingZeros().toPlainString();
-                        } catch (ArithmeticException e) {
-                            result = var1.divide(var2, 10, RoundingMode.HALF_UP).stripTrailingZeros().toString();
+                    try {
+                        txt = var1.toString() + "/" + var2.toString();
+                        if (var2.equals(BigDecimal.ZERO)) {
+                            displayresult(txt, "Not Defined!");
+                            divi = false;
+                        } else {
+                            try {
+                                result = var1.divide(var2, 10, RoundingMode.UNNECESSARY).stripTrailingZeros().toPlainString();
+                            } catch (ArithmeticException e) {
+                                result = var1.divide(var2, 10, RoundingMode.HALF_UP).stripTrailingZeros().toString();
+                            }
+                            displayresult(txt, result);
+                            divi = false;
                         }
-                        displayresult(txt, result);
-                        divi=false;
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
                     }
                 }
                 else if (per)
                 {
-                    if (var2.equals(BigDecimal.ZERO))
-                    {
-                        txt = var1.toString() + "%";
-                        result = var1.divide(new BigDecimal("100"), 10, BigDecimal.ROUND_UNNECESSARY).stripTrailingZeros().toPlainString();
-                        displayresult(txt, result);
-                        per=false;
-                    }
-                    else
-                    {
-                        txt = "(" + var1.toString() + "/" + var2.toString() + ")%";
-                        try {
-                            result = (var1.divide(var2, 10, RoundingMode.UNNECESSARY).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
-                        } catch (ArithmeticException e) {
-                            result = (var1.divide(var2, 10, RoundingMode.HALF_UP).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
+                    try {
+                        if (var2.equals(BigDecimal.ZERO)) {
+                            txt = var1.toString() + "%";
+                            result = var1.divide(new BigDecimal("100"), 10, BigDecimal.ROUND_UNNECESSARY).stripTrailingZeros().toPlainString();
+                            displayresult(txt, result);
+                            per = false;
+                        } else {
+                            txt = "(" + var1.toString() + "/" + var2.toString() + ")%";
+                            try {
+                                result = (var1.divide(var2, 10, RoundingMode.UNNECESSARY).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
+                            } catch (ArithmeticException e) {
+                                result = (var1.divide(var2, 10, RoundingMode.HALF_UP).multiply(new BigDecimal("100"))).stripTrailingZeros().toPlainString();
+                            }
+                            displayresult(txt, result);
+                            per = false;
                         }
-                        displayresult(txt, result);
-                        per=false;
+                    } catch (Exception e) {
+                        displayresult("", "Error!");
                     }
                 }
             }

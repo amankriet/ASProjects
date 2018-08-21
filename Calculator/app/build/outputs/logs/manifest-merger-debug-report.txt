@@ -1,146 +1,146 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-MERGED from [com.android.support:appcompat-v7:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-beta01.aar\0f4c6cd2359e4535d60455abd84d11d0\AndroidManifest.xml:17:1-22:12
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc01.aar\ea5e3ce3ef8dbe91787decd7cf4222d9\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\3942eff80f51c0f61d05f22b98fb07a8\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-beta01.aar\47412a18f8fee75ff3d20a65ad38c2a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-beta01.aar\04540a387c8aa5c2995ea33d9872297f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-beta01.aar\c66a63d7c52a3b19deb613316800bee4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-beta01.aar\62cde2ec423f0a739b6e735bf35524a2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-beta01.aar\b2cbd71b18d4b4390ef43cb7dfee99c3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-beta01.aar\be983835edafbca2fe0c926f51ba5655\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-beta01.aar\1dcfdc9a55173bae4a0f8bdebda1d1d5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-beta01.aar\570908d647a553ae7f1eca2fa8921066\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-beta01.aar\a85c7690365c2ba7356d1728c34638d6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-beta01.aar\fe55d9ea8a8e57840cff4da9a0249fd9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-beta01.aar\531ea17daaa1666a8b766c71dc925a17\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-beta01.aar\43713c9d31a41c5942015baab570a57b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-beta01.aar\e72596648a36ba00bb92c4c86532ddc8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:cursoradapter:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-beta01.aar\fec331bb0ddd5e1b41042809d202162f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc01.aar\7a54ad60516f77966a62b6d3381584d7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc01.aar\dac70abf2df515b72f44f398c61d52b5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc01.aar\1c5ab68b9f05d89b79d70bc7693ce95e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc01.aar\12890493ab9265babc36d0ffec4ee938\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc01.aar\f65a1e2504a498c8e84f4978073c7697\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc01.aar\e94b112091295b0a900eb1a253614e42\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc01.aar\521830f011fa2289743d80d2b47cea34\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc01.aar\864f7919b06025dfebda2fc22e2f9b61\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc01.aar\0397651f8f017c5983d4912f572ee2ff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc01.aar\87b0f40e09345f335842ccf8cafc4628\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc01.aar\fcda9ff459431c578471e23a80b913d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc01.aar\a7fd77b01eb08b55e55704c844c2ac7d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc01.aar\3d3366021c08c13cfa94e2ca5db320a8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc01.aar\36e9c528f32ede9720f2df7d264f6549\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc01.aar\37af92a18a9c0acaeb92c6b22eb0ee18\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\46e621e45a44034a5c83417d10a0142f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:versionedparcelable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-beta01.aar\4f290021320f03760982cc30b08c85f2\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:documentfile:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-beta01.aar\886c6bd331ab21a1045d4580e8f66758\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-beta01.aar\fe20f15a9670d75fd65fa4b83c37c62a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-beta01.aar\cbb16bd0457938d4c3af2b182a5e0a4c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc01.aar\65f5eae4d3780f675c260bab35f4fe9d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc01.aar\25673b6aa450c78f22eb397975159dae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc01.aar\47d011dbf73f4459c00b2f216a8fb52e\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\5c30851c63f5ab0a36f7fce7db2f76ed\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\1943f2528b52f57f9a0d4486ebe37564\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\ae3e43e86064d06c86900ba6a12894df\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-beta01.aar\8c7077b0e6d94a8d0b7625daf7f57c35\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc01.aar\4141cf29b2861c7a0bfe44209fccd18f\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 	android:versionName
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
-		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:1-22:12
 		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:4:5-32
+		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:8:5-23:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\3942eff80f51c0f61d05f22b98fb07a8\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\3942eff80f51c0f61d05f22b98fb07a8\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-beta01.aar\4f290021320f03760982cc30b08c85f2\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-beta01.aar\4f290021320f03760982cc30b08c85f2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc01.aar\36e9c528f32ede9720f2df7d264f6549\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc01.aar\36e9c528f32ede9720f2df7d264f6549\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:6:9-41
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:11:9-38
 	android:allowBackup
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:12:9-42
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:15:9-42
 activity#com.amankriet.virusishere.calculator.MainActivity
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:13:9-19:20
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:13:19-47
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:16:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-beta01.aar\0f4c6cd2359e4535d60455abd84d11d0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-beta01.aar\0f4c6cd2359e4535d60455abd84d11d0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc01.aar\ea5e3ce3ef8dbe91787decd7cf4222d9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc01.aar\ea5e3ce3ef8dbe91787decd7cf4222d9\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\3942eff80f51c0f61d05f22b98fb07a8\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\3942eff80f51c0f61d05f22b98fb07a8\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-beta01.aar\47412a18f8fee75ff3d20a65ad38c2a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-beta01.aar\47412a18f8fee75ff3d20a65ad38c2a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-beta01.aar\04540a387c8aa5c2995ea33d9872297f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-beta01.aar\04540a387c8aa5c2995ea33d9872297f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-beta01.aar\c66a63d7c52a3b19deb613316800bee4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-beta01.aar\c66a63d7c52a3b19deb613316800bee4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-beta01.aar\62cde2ec423f0a739b6e735bf35524a2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-beta01.aar\62cde2ec423f0a739b6e735bf35524a2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-beta01.aar\b2cbd71b18d4b4390ef43cb7dfee99c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-beta01.aar\b2cbd71b18d4b4390ef43cb7dfee99c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-beta01.aar\be983835edafbca2fe0c926f51ba5655\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-beta01.aar\be983835edafbca2fe0c926f51ba5655\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-beta01.aar\1dcfdc9a55173bae4a0f8bdebda1d1d5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-beta01.aar\1dcfdc9a55173bae4a0f8bdebda1d1d5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-beta01.aar\570908d647a553ae7f1eca2fa8921066\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-beta01.aar\570908d647a553ae7f1eca2fa8921066\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-beta01.aar\a85c7690365c2ba7356d1728c34638d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-beta01.aar\a85c7690365c2ba7356d1728c34638d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-beta01.aar\fe55d9ea8a8e57840cff4da9a0249fd9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-beta01.aar\fe55d9ea8a8e57840cff4da9a0249fd9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-beta01.aar\531ea17daaa1666a8b766c71dc925a17\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-beta01.aar\531ea17daaa1666a8b766c71dc925a17\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-beta01.aar\43713c9d31a41c5942015baab570a57b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-beta01.aar\43713c9d31a41c5942015baab570a57b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-beta01.aar\e72596648a36ba00bb92c4c86532ddc8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-beta01.aar\e72596648a36ba00bb92c4c86532ddc8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-beta01.aar\8821840e3187535d6a041bedb83941c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-beta01.aar\fec331bb0ddd5e1b41042809d202162f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-beta01.aar\fec331bb0ddd5e1b41042809d202162f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc01.aar\7a54ad60516f77966a62b6d3381584d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc01.aar\7a54ad60516f77966a62b6d3381584d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc01.aar\dac70abf2df515b72f44f398c61d52b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc01.aar\dac70abf2df515b72f44f398c61d52b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc01.aar\1c5ab68b9f05d89b79d70bc7693ce95e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc01.aar\1c5ab68b9f05d89b79d70bc7693ce95e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc01.aar\12890493ab9265babc36d0ffec4ee938\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc01.aar\12890493ab9265babc36d0ffec4ee938\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc01.aar\f65a1e2504a498c8e84f4978073c7697\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc01.aar\f65a1e2504a498c8e84f4978073c7697\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc01.aar\e94b112091295b0a900eb1a253614e42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc01.aar\e94b112091295b0a900eb1a253614e42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc01.aar\521830f011fa2289743d80d2b47cea34\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc01.aar\521830f011fa2289743d80d2b47cea34\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc01.aar\864f7919b06025dfebda2fc22e2f9b61\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc01.aar\864f7919b06025dfebda2fc22e2f9b61\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc01.aar\0397651f8f017c5983d4912f572ee2ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc01.aar\0397651f8f017c5983d4912f572ee2ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc01.aar\87b0f40e09345f335842ccf8cafc4628\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc01.aar\87b0f40e09345f335842ccf8cafc4628\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc01.aar\fcda9ff459431c578471e23a80b913d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc01.aar\fcda9ff459431c578471e23a80b913d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc01.aar\a7fd77b01eb08b55e55704c844c2ac7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc01.aar\a7fd77b01eb08b55e55704c844c2ac7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc01.aar\3d3366021c08c13cfa94e2ca5db320a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc01.aar\3d3366021c08c13cfa94e2ca5db320a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc01.aar\13088296469878470e2f509c621c1b22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc01.aar\36e9c528f32ede9720f2df7d264f6549\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc01.aar\36e9c528f32ede9720f2df7d264f6549\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc01.aar\37af92a18a9c0acaeb92c6b22eb0ee18\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc01.aar\37af92a18a9c0acaeb92c6b22eb0ee18\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\46e621e45a44034a5c83417d10a0142f\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\46e621e45a44034a5c83417d10a0142f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-beta01.aar\4f290021320f03760982cc30b08c85f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-beta01.aar\4f290021320f03760982cc30b08c85f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-beta01.aar\886c6bd331ab21a1045d4580e8f66758\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-beta01.aar\886c6bd331ab21a1045d4580e8f66758\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-beta01.aar\fe20f15a9670d75fd65fa4b83c37c62a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-beta01.aar\fe20f15a9670d75fd65fa4b83c37c62a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-beta01.aar\cbb16bd0457938d4c3af2b182a5e0a4c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-beta01.aar\cbb16bd0457938d4c3af2b182a5e0a4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc01.aar\65f5eae4d3780f675c260bab35f4fe9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc01.aar\65f5eae4d3780f675c260bab35f4fe9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc01.aar\25673b6aa450c78f22eb397975159dae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc01.aar\25673b6aa450c78f22eb397975159dae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc01.aar\47d011dbf73f4459c00b2f216a8fb52e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc01.aar\47d011dbf73f4459c00b2f216a8fb52e\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\5c30851c63f5ab0a36f7fce7db2f76ed\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\5c30851c63f5ab0a36f7fce7db2f76ed\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\1943f2528b52f57f9a0d4486ebe37564\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\1943f2528b52f57f9a0d4486ebe37564\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\ae3e43e86064d06c86900ba6a12894df\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\ae3e43e86064d06c86900ba6a12894df\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-beta01.aar\8c7077b0e6d94a8d0b7625daf7f57c35\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0-beta01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-beta01.aar\8c7077b0e6d94a8d0b7625daf7f57c35\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc01.aar\4141cf29b2861c7a0bfe44209fccd18f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0-rc01] C:\Users\VirusIsHere\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc01.aar\4141cf29b2861c7a0bfe44209fccd18f\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\VirusIsHere\AndroidStudioProjects\Calculator\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

@@ -2963,7 +2963,7 @@ public final class R {
     public static final int abc_textfield_search_default_mtrl_alpha=0x7f060052;
     public static final int abc_textfield_search_material=0x7f060053;
     public static final int abc_vector_test=0x7f060054;
-    public static final int halloween=0x7f060055;
+    public static final int calc=0x7f060055;
     public static final int ic_launcher_background=0x7f060056;
     public static final int ic_launcher_foreground=0x7f060057;
     public static final int notification_action_background=0x7f060058;

@@ -28,7 +28,7 @@
             android:layout_weight=".25"
             android:background="@color/dark_grey"
             android:padding="0dp"
-            android:gravity="right"
+            android:gravity="end"
             android:textColor="@color/white"
             android:textSize="50sp" />
 
@@ -42,6 +42,7 @@
             android:background="@color/dark_grey"
             android:padding="0dp"
             android:textColor="@color/white"
+            android:scrollbars="vertical"
             android:gravity="bottom|end"
             android:textSize="50sp" />
 
