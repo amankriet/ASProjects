@@ -1714,7 +1714,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3205,10 +3205,13 @@ public final class R {
     public static final int main_menu=0x7f0a0000;
   }
   public static final class mipmap {
-    public static final int ic_exit=0x7f0b0000;
-    public static final int ic_info=0x7f0b0001;
-    public static final int ic_launcher=0x7f0b0002;
-    public static final int ic_launcher_round=0x7f0b0003;
+    public static final int ic_calc=0x7f0b0000;
+    public static final int ic_calc_round=0x7f0b0001;
+    public static final int ic_exit=0x7f0b0002;
+    public static final int ic_info=0x7f0b0003;
+    public static final int ic_launcher=0x7f0b0004;
+    public static final int ic_launcher_foreground=0x7f0b0005;
+    public static final int ic_launcher_round=0x7f0b0006;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0c0000;
@@ -7986,7 +7989,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

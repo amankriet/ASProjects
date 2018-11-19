@@ -1,4 +1,13 @@
-#Wed Aug 15 01:39:30 IST 2018
-base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\68
+#Mon Nov 19 17:17:26 IST 2018
+path.3=classes.dex
+path.2=classes.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.3=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\83
+base.2=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\81
+base.1=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\82
+base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\80
