@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private MyPhoneCallListener mListener;
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
-    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1;
+    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 2;
     int phone_permission=10;
     Button sendb;
     ImageButton send_smsib;
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         checkForSmsPermission();
         ins = this;
-
         sendb = findViewById(R.id.bsend);
         send_smsib = findViewById(R.id.ibsend_sms);
         mob_num = findViewById(R.id.etmob_num);
