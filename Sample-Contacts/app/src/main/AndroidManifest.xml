@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
@@ -22,11 +24,11 @@
         <activity
             android:name="com.amankriet.samplecontacts.AddContact"
             android:label="@string/add_contacts"
-            android:theme="@android:style/Theme.Dialog"></activity>
+            android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.amankriet.samplecontacts.DeleteContacts"
             android:label="@string/delete_contacts"
-            android:theme="@android:style/Theme.Dialog"></activity>
+            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>
