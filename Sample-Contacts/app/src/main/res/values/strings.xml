@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Custom Contacts</string>
+    <string name="add_contacts">Add Contacts</string>
+    <string name="delete_contacts">Delete Contacts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Contacts Details</string>
+    <string name="name">Name</string>
+    <string name="runs">Number</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="add">ADD</string>
+    <string name="cancel">CANCEL</string>
+    <string name="vpa">VPA</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="delete">Delete</string>
+</resources>

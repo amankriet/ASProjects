@@ -1,0 +1,4 @@
+#Sat Jan 26 20:29:07 IST 2019
+base.0=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Sample-Contacts\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.0=classes.dex
+renamed.0=classes.dex
