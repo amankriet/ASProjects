@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,34 +31,46 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     public static final int MULTIPLE_PERMISSIONS_CODE = 10;
 
-    private ListView obj;
+    public ArrayList<String> conNames = new ArrayList<>();
+    public ArrayList<String> conNumbers = new ArrayList<>();
+    public ArrayList<String> emlRecs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<String> conEmail;
         if (checkPermissionRequest()) {
             Log.d(MainActivity.class.getSimpleName(), "Permission check complete");
 
-            conEmail = getNameEmailDetails();
-            ArrayAdapter arrayadapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, conEmail);
-            obj = findViewById(R.id.contactlist);
+            conNames = new ArrayList<>();
+            conNumbers = new ArrayList<>();
+            getNameEmailDetails();
+            ArrayAdapter arrayadapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, conNames);
+            final ListView obj = findViewById(R.id.contactlist);
             obj.setAdapter(arrayadapter);
+
+            obj.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    Intent intent = new Intent(getApplicationContext(), Display_Detail.class);
+                    intent.putExtra("cName", obj.getItemAtPosition(i).toString().trim());
+                    startActivity(intent);
+
+                }
+            });
         }
     }
 
-    public ArrayList<String> getNameEmailDetails() {
-        ArrayList<String> emlRecs = new ArrayList<>();
+    public void getNameEmailDetails() {
         HashSet<String> emlRecsHS = new HashSet<>();
-        Context context = MainActivity.this;
+        Context context = getApplicationContext();
         ContentResolver cr = context.getContentResolver();
         String[] PROJECTION = new String[]{ContactsContract.RawContacts._ID,
                 ContactsContract.Contacts.DISPLAY_NAME,
-                ContactsContract.Contacts.PHOTO_ID,
-                ContactsContract.CommonDataKinds.Email.DATA,
-                ContactsContract.CommonDataKinds.Photo.CONTACT_ID};
+                ContactsContract.CommonDataKinds.Phone.NUMBER,
+                ContactsContract.CommonDataKinds.Email.DATA};
         String order = "CASE WHEN "
                 + ContactsContract.Contacts.DISPLAY_NAME
                 + " NOT LIKE '%@%' THEN 1 ELSE 2 END, "
@@ -64,21 +80,39 @@ public class MainActivity extends AppCompatActivity {
                 + " COLLATE NOCASE";
         String filter = ContactsContract.CommonDataKinds.Email.DATA + " NOT LIKE ''";
         Cursor cur = cr.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, PROJECTION, filter, null, order);
+        assert cur != null;
         if (cur.moveToFirst()) {
             do {
-                // names comes in hand sometimes
                 String name = cur.getString(1);
+                String number = cur.getString(2);
                 String emlAddr = cur.getString(3);
 
                 // keep unique only
                 if (emlRecsHS.add(emlAddr.toLowerCase())) {
+                    conNames.add(name);
+                    conNumbers.add(number);
                     emlRecs.add(emlAddr);
                 }
             } while (cur.moveToNext());
         }
 
         cur.close();
-        return emlRecs;
+
+    }
+
+    public boolean sendConNames() {
+        Display_Detail sendingNames = new Display_Detail();
+        return sendingNames.getConNames(conNames);
+    }
+
+    public boolean sendConNumbers() {
+        Display_Detail sendingNumbers = new Display_Detail();
+        return sendingNumbers.getConNumbers(conNumbers);
+    }
+
+    public boolean sendConEmails() {
+        Display_Detail sendingEmails = new Display_Detail();
+        return sendingEmails.getConEmails(emlRecs);
     }
 
     private boolean checkPermissionRequest() {
@@ -111,9 +145,11 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = 0; i < permissions.length; i++) {
                         perms.put(permissions[i], grantResults[i]);
                     }
+                    //noinspection ConstantConditions
                     if (perms.get(Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED
                             && perms.get(Manifest.permission.WRITE_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
                         Log.d(MainActivity.class.getSimpleName(), "Contacts Access Granted!");
+                        startApp();
                     } else {
                         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                                 Manifest.permission.READ_CONTACTS) || ActivityCompat.
@@ -139,4 +175,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void startApp() {
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cdmenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
 }
