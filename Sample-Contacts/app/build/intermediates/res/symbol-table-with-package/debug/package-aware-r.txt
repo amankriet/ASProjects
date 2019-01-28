@@ -714,7 +714,6 @@ id edtContactName
 id edtContactNumber
 id edtDeleteContactName
 id edtDeleteContactNumber
-id edtVPA
 id end
 id expand_activities_button
 id expanded_menu
@@ -806,7 +805,6 @@ id top
 id topPanel
 id tvNameMain
 id tvNumberMain
-id tvVPAMain
 id uniform
 id up
 id useLogo

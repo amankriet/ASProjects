@@ -13,8 +13,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.amankriet.samplecontacts.MainActivity"
-            android:label="@string/title_activity_main">
+            android:name=".AddContact"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.amankriet.samplecontacts.AddContact"
-            android:label="@string/add_contacts"
-            android:theme="@android:style/Theme.Dialog" />
-        <activity
-            android:name="com.amankriet.samplecontacts.DeleteContacts"
-            android:label="@string/delete_contacts"
+            android:name=".DeleteContacts"
             android:theme="@android:style/Theme.Dialog" />
     </application>
 
