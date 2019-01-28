@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(getApplicationContext(), Display_Detail.class);
                     intent.putExtra("cName", obj.getItemAtPosition(i).toString().trim());
+                    intent.putExtra("allNames", conNames);
+                    intent.putExtra("allNumbers", conNumbers);
+                    intent.putExtra("allEmails", emlRecs);
                     startActivity(intent);
 
                 }
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void getNameEmailDetails() {
         HashSet<String> emlRecsHS = new HashSet<>();
-        Context context = getApplicationContext();
+        Context context = MainActivity.this;
         ContentResolver cr = context.getContentResolver();
         String[] PROJECTION = new String[]{ContactsContract.RawContacts._ID,
                 ContactsContract.Contacts.DISPLAY_NAME,
@@ -98,21 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
         cur.close();
 
-    }
-
-    public boolean sendConNames() {
-        Display_Detail sendingNames = new Display_Detail();
-        return sendingNames.getConNames(conNames);
-    }
-
-    public boolean sendConNumbers() {
-        Display_Detail sendingNumbers = new Display_Detail();
-        return sendingNumbers.getConNumbers(conNumbers);
-    }
-
-    public boolean sendConEmails() {
-        Display_Detail sendingEmails = new Display_Detail();
-        return sendingEmails.getConEmails(emlRecs);
     }
 
     private boolean checkPermissionRequest() {
