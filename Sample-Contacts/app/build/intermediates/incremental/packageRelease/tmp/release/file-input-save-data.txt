@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Jan 28 12:05:45 IST 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\VirusIsHere\\AndroidStudioProjects\\Sample-Contacts\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1

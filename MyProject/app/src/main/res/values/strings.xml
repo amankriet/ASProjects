@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Project</string>
+    <string name="slogan">No matter what you want: whether you want food, or want any shopping product,
+        or any miscellaneous item - we will find it and we will deliver you!</string>
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+</resources>
