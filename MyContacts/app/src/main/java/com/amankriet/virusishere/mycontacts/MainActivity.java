@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int MULTIPLE_PERMISSIONS_CODE = 10;
 
     public ArrayList<String> conNames = new ArrayList<>();
-    public ArrayList<String> conNumbers = new ArrayList<>();
-    public ArrayList<String> emlRecs = new ArrayList<>();
+    public ArrayList<String> conID = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
         if (checkPermissionRequest()) {
             Log.d(MainActivity.class.getSimpleName(), "Permission check complete");
 
-            conNames = new ArrayList<>();
-            conNumbers = new ArrayList<>();
             getNameEmailDetails();
             ArrayAdapter arrayadapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, conNames);
             final ListView obj = findViewById(R.id.contactlist);
@@ -57,8 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), Display_Detail.class);
                     intent.putExtra("cName", obj.getItemAtPosition(i).toString().trim());
                     intent.putExtra("allNames", conNames);
-                    intent.putExtra("allNumbers", conNumbers);
-                    intent.putExtra("allEmails", emlRecs);
+                    intent.putExtra("c_id", conID);
                     startActivity(intent);
 
                 }
@@ -67,36 +63,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getNameEmailDetails() {
-        HashSet<String> emlRecsHS = new HashSet<>();
+        HashSet<String> nameRecHS = new HashSet<>();
         Context context = MainActivity.this;
         ContentResolver cr = context.getContentResolver();
-        String[] PROJECTION = new String[]{ContactsContract.RawContacts._ID,
-                ContactsContract.Contacts.DISPLAY_NAME,
-                ContactsContract.CommonDataKinds.Phone.NUMBER,
-                ContactsContract.CommonDataKinds.Email.DATA};
-        String order = "CASE WHEN "
-                + ContactsContract.Contacts.DISPLAY_NAME
-                + " NOT LIKE '%@%' THEN 1 ELSE 2 END, "
-                + ContactsContract.Contacts.DISPLAY_NAME
-                + ", "
-                + ContactsContract.CommonDataKinds.Email.DATA
-                + " COLLATE NOCASE";
-        String filter = ContactsContract.CommonDataKinds.Email.DATA + " NOT LIKE ''";
-        Cursor cur = cr.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, PROJECTION, filter, null, order);
-        assert cur != null;
-        if (cur.moveToFirst()) {
-            do {
-                String name = cur.getString(1);
-                String number = cur.getString(2);
-                String emlAddr = cur.getString(3);
+        Cursor cur = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null,
+                null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
 
-                // keep unique only
-                if (emlRecsHS.add(emlAddr.toLowerCase())) {
+        assert cur != null;
+        if (cur.getCount() > 0) {
+            while (cur.moveToNext()) {
+                String c_id = cur.getString(cur.getColumnIndex(ContactsContract.Contacts._ID));
+                String name = cur.getString(cur.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+                if (nameRecHS.add(name)) {
                     conNames.add(name);
-                    conNumbers.add(number);
-                    emlRecs.add(emlAddr);
+                    conID.add(c_id);
                 }
-            } while (cur.moveToNext());
+            }
         }
 
         cur.close();
@@ -116,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             listPermissionsNeeded.add(Manifest.permission.WRITE_CONTACTS);
         }
         if (!listPermissionsNeeded.isEmpty()) {
-            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]), MULTIPLE_PERMISSIONS_CODE);
+            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[0]), MULTIPLE_PERMISSIONS_CODE);
             return false;
         }
         return true;
