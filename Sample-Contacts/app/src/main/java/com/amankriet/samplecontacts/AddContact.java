@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class AddContact extends Activity implements OnClickListener {
 
     private EditText edtContactName, edtContactNumber;
-    private Button btnAddContact, btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +22,8 @@ public class AddContact extends Activity implements OnClickListener {
         edtContactName = findViewById(R.id.edtContactName);
         edtContactNumber = findViewById(R.id.edtContactNumber);
 
-        btnAddContact = findViewById(R.id.btnAddContact);
-        btnCancel = findViewById(R.id.btnCancel);
+        Button btnAddContact = findViewById(R.id.btnAddContact);
+        Button btnCancel = findViewById(R.id.btnCancel);
 
         btnAddContact.setOnClickListener(this);
         btnCancel.setOnClickListener(this);

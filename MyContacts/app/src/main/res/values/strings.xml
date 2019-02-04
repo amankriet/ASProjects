@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">My Contacts</string>
     <string name="add_contact">Add Contact</string>
+    <string name="create_contact">Create Contact</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="vpa">VPA</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="del">Delete</string>
 </resources>

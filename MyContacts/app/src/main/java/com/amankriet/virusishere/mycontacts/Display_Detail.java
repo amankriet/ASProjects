@@ -1,5 +1,7 @@
 package com.amankriet.virusishere.mycontacts;
 
+import android.content.ContentProviderOperation;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -8,9 +10,12 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +28,7 @@ public class Display_Detail extends AppCompatActivity {
     public ArrayList<String> emlRecs = new ArrayList<>();
     public ArrayList<String> list = new ArrayList<>();
     int indx = 0;
-    String cName = "";
+    String cName = "", c_id = "";
 
     TextView tvName;
     ListView contactDetails;
@@ -47,11 +52,9 @@ public class Display_Detail extends AppCompatActivity {
             cName = extras.getString("cName");
             conNames.addAll(Objects.requireNonNull(extras.getStringArrayList("allNames")));
             conID.addAll(Objects.requireNonNull(extras.getStringArrayList("c_id")));
-            Log.d(Display_Detail.class.getSimpleName(), conNames.size() + "");
             tvName.setText(cName);
             indx = conNames.indexOf(cName);
-            Log.d(Display_Detail.class.getSimpleName(), indx + " indx");
-            String c_id = conID.get(indx);
+            c_id = conID.get(indx);
             getConNumbers(c_id);
             getConEmails(c_id);
             if (emlRecs.size() > 0) {
@@ -87,6 +90,41 @@ public class Display_Detail extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private boolean deleteContact() {
+        ContentResolver cr = getApplicationContext().getContentResolver();
+        ArrayList<ContentProviderOperation> ops = new ArrayList<>();
+
+        try {
+            ops.add(ContentProviderOperation.newDelete(ContactsContract.RawContacts.CONTENT_URI)
+                    .withSelection(ContactsContract.RawContacts.CONTACT_ID + "=?", new String[]{c_id}).build());
+
+            cr.applyBatch(ContactsContract.AUTHORITY, ops);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.del) {
+            if (deleteContact()) {
+                Toast.makeText(this, "Contact Deleted!", Toast.LENGTH_LONG).show();
+                finish();
+            } else {
+                Toast.makeText(this, "Failed to delete contact!", Toast.LENGTH_LONG).show();
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.display_contactmenu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     public void getConEmails(String c_id) {

@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         if (checkPermissionRequest()) {
             Log.d(MainActivity.class.getSimpleName(), "Permission check complete");
 
-            getNameEmailDetails();
+            getNameDetails();
             ArrayAdapter arrayadapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, conNames);
             final ListView obj = findViewById(R.id.contactlist);
             obj.setAdapter(arrayadapter);
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void getNameEmailDetails() {
+    public void getNameDetails() {
         HashSet<String> nameRecHS = new HashSet<>();
         Context context = MainActivity.this;
         ContentResolver cr = context.getContentResolver();
@@ -146,10 +147,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void startApp() {
-        Intent intent = new Intent(this, MainActivity.class);
-        finish();
-        startActivity(intent);
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        startApp();
+    }
+
+    protected void startApp() {
+        Intent refresh = new Intent(this, MainActivity.class);
+        startActivity(refresh);
+        this.finish();
     }
 
     @Override
@@ -158,4 +165,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item1) {
+            Intent addCon = new Intent(this, AddContact.class);
+            startActivity(addCon);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
